@@ -39,6 +39,9 @@ function theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'editor-styles' );
+
 	// Adds align-full and align-wide support in the editor.
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
