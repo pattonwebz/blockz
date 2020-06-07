@@ -3,18 +3,31 @@ module.exports = {
 		enabled: true,
     	content: ['./**/*.php'],
 	},
-	theme: {
-	container: {
-		center: true,
-    	padding: {
-        	default: '2rem',
-        	sm: '2rem',
-        	lg: '0',
-        	xl: '0',
-    	},
-	},
-	extend: {},
-	},
+	theme: {},
 	variants: {},
-	plugins: [],
+	corePlugins: {
+		container: false
+	},
+	plugins: [
+		function ({ addComponents }) {
+			addComponents({
+				'.container': {
+					width: '100%',
+					marginLeft: 'auto',
+					marginRight: 'auto',
+					paddingLeft: '2rem',
+					paddingRight: '2rem',
+					'@screen md': {
+						maxWidth: '640px',
+					},
+					'@screen lg': {
+						maxWidth: '768px',
+					},
+					'@screen xl': {
+						maxWidth: '1024px',
+					},
+				}
+			})
+		}
+	]
 }

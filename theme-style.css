@@ -29,18 +29,19 @@ a {
 a.post-content{
 	@apply underline;
 }
-a:hover {
+a:hover,
+a:focus {
 	@apply text-teal-400;
 }
 
-footer a {
+.site-footer a {
 	@apply text-teal-200 underline;
 }
-footer a:hover {
+.site-footer a:hover {
 	@apply text-teal-900;
 }
 p {
-	@apply mb-3 text-lg;
+	@apply mb-3 text-xl;
 }
 
 #nav-items.hidden{
@@ -57,8 +58,31 @@ input[type=submit] {
 }
 .btn:hover,
 input[type=button]:hover,
-input[type=submit]:hover {
+input[type=submit]:focus {
 	@apply bg-teal-700 text-white;
+}
+
+#commentform > p > label {
+	@apply block pb-2;
+}
+
+textarea#comment,
+input#author,
+input#email,
+input#url {
+	@apply block w-full p-2 px-3 border-2 rounded border-teal-600;
+}
+
+#comments .comment {
+	@apply border border-teal-800 p-4 mb-2;
+}
+
+#comments .comment img.avatar {
+	@apply float-left mb-2 mr-2;
+}
+
+#comments .comment footer.comment-meta {
+	@apply mb-3;
 }
 
 /* Text meant only for screen readers. */
