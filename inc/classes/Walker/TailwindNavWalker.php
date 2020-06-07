@@ -16,20 +16,7 @@ namespace PattonWebz\Blockz\Walker;
  *
  * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- This is a class the extends a core class, the hooks and filters are core ones.
  */
-class TailwindNavWalker extends \Walker {
-	/**
-	 * What the class handles.
-	 *
-	 * @since 3.0.0
-	 * @var string
-	 *
-	 * @see Walker::$tree_type
-	 */
-	public $tree_type = array(
-		'post_type',
-		'taxonomy',
-		'custom',
-	);
+class TailwindNavWalker extends \Walker_Nav_Menu {
 
 	/**
 	 * Database fields to use.
