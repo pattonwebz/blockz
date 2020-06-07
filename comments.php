@@ -46,15 +46,11 @@
 
 		<ol class="commentlist">
 			<?php
-
-				/*
-				 * Loop through and list the comments. Tell wp_list_comments()
-				 * to use best_reloaded_respond_comment() to format the comments.
-				 * If you want to overload this in a child theme then you can
-				 * define best_reloaded_respond_comment() and that will be used instead.
-				 * See best_reloaded_respond_comment() in comments-and-pingpacks.php for more.
-				 */
-				wp_list_comments();
+				wp_list_comments(
+					[
+						'avatar_size' => 50,
+					]
+				);
 			?>
 		</ol>
 
