@@ -25,8 +25,12 @@
 			<div class="flex items-center flex-shrink-0 text-white mr-6">
 				<?php
 				$blockz_header_el = ( is_single() ) ? 'span' : 'h1';
+				printf(
+					'<%1$s0 class="font-semibold text-xl tracking-tight"></%1$s>',
+					esc_attr( $blockz_header_el ),
+					bloginfo( 'name' )
+				)
 				?>
-				<<?php echo esc_attr( $blockz_header_el ); ?> class="font-semibold text-xl tracking-tight"><?php bloginfo( 'name' ); ?></<?php echo esc_attr( $blockz_header_el ); ?>>
 			</div>
 		<div class="block md:hidden">
 			<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
