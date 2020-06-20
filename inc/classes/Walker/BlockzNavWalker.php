@@ -115,7 +115,7 @@ class BlockzNavWalker extends \Walker_Nav_Menu {
 		 */
 		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
-		$attributes = ' class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"';
+		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
 			if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
 				$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );

@@ -6,7 +6,7 @@
  */
 
 ?>
-<div class="entry-meta border-t border-b pt-4 pb-4 mb-2">
+<div class="entry-meta">
 	<?php
 	$blockz_comments_markup = sprintf(
 		'<a href="%1$s" title="%2$s">%2$s</a>',
@@ -16,7 +16,7 @@
 	echo wp_kses_post(
 		sprintf(
 			/* Translators: 1 - a linked author name, 2 - a formatted timestamp, 3 - a list of linked category names, 4 - the number of comments linked. */
-			'<span class="italic text-teal-900">' . __( 'Written by %1$s on %2$s in %3$s with %4$s', 'blockz' ) . '</span>',
+			'<span class="italic text-orange-800">' . __( 'Written by %1$s on %2$s in %3$s with %4$s.', 'blockz' ) . '</span>',
 			get_the_author_link(),
 			get_the_time( get_option( 'date_format' ) ),
 			get_the_category_list( __( ' and ', 'blockz' ) ),

@@ -24,14 +24,12 @@ nav h1 {
 	@apply mb-0;
 }
 a {
-	@apply text-teal-700;
+	@apply text-orange-700;
 }
-a.post-content{
-	@apply underline;
-}
+
 a:hover,
 a:focus {
-	@apply text-teal-400;
+	@apply text-orange-500 underline;
 }
 
 p {
@@ -41,6 +39,7 @@ p {
 #nav-items.hidden{
 	@apply h-0;
 }
+
 @import "node_modules/tailwindcss/components.css";
 
 @import "node_modules/tailwindcss/utilities.css";
@@ -48,8 +47,12 @@ p {
 #content {
 	@apply mb-12;
 }
+
+#content a {
+	@apply underline;
+}
 #header-nav {
-	@apply flex flex-wrap bg-teal-500 p-6;
+	@apply flex flex-wrap bg-orange-600 p-6;
 }
 
 #site-title {
@@ -61,7 +64,7 @@ p {
 }
 
 #nav-toggle {
-	@apply font-semibold px-3 py-2 border rounded text-teal-200 border-teal-400;
+	@apply font-semibold px-3 py-2 border rounded text-orange-200 border-orange-400;
 }
 #nav-toggle:hover,
 #nav-toggle:focus {
@@ -69,21 +72,34 @@ p {
 }
 #nav-toggle svg {
 	@apply fill-current h-3 w-3;
-
 }
+
 #header-nav-items {
 	@apply w-full hidden flex-grow;
 }
+#header-nav-items.block{
+	display: block !important;
+}
 
+#header-nav-items .menu-item a {
+	@apply text-orange-100 block mt-4 mr-4;
+}
+#header-nav-items .menu-item a:hover,
+#header-nav-items .menu-item a:focus {
+	@apply text-orange-300 underline;
+}
+#header-nav-items .menu-item a:active {
+	@apply text-orange-300;
+}
 #site-footer{
-	@apply bg-teal-500 text-teal-100 mt-4 pt-6 pb-2;
+	@apply bg-orange-600 text-orange-100 mt-4 pt-6 pb-2;
 }
 
 #site-footer a {
-	@apply text-teal-200 underline;
+	@apply text-orange-200 underline;
 }
 #site-footer a:hover {
-	@apply text-teal-900;
+	@apply text-orange-900;
 }
 
 @screen lg {
@@ -91,19 +107,19 @@ p {
 		@apply hidden;
 	}
 	#header-nav-items {
-		@apply flex items-center w-auto
+		@apply flex items-center w-auto;
 	}
 }
 
 .btn,
 input[type=button],
 input[type=submit] {
-	@apply font-bold py-2 px-4 rounded bg-teal-500 text-white;
+	@apply font-bold py-2 px-4 rounded bg-orange-600 text-white;
 }
 .btn:hover,
 input[type=button]:hover,
 input[type=submit]:focus {
-	@apply bg-teal-700 text-white;
+	@apply bg-orange-800 text-white;
 }
 
 #commentform > p > label {
@@ -113,12 +129,25 @@ input[type=submit]:focus {
 textarea#comment,
 input#author,
 input#email,
-input#url {
-	@apply block w-full p-2 px-3 border-2 rounded border-teal-600;
+input#url,
+input.search-field {
+	@apply block w-full p-2 px-3 border-2 rounded border-orange-600 outline-none;
+}
+
+textarea#comment:focus,
+input#author:focus,
+input#email:focus,
+input#url:focus,
+input.search-field:focus {
+	@apply shadow-outline;
+}
+
+input.search-field {
+	@apply p-2 py-3 text-black;
 }
 
 #comments .comment {
-	@apply border border-teal-800 p-4 mb-2;
+	@apply border bg-orange-300 border-orange-600 p-4 mb-2;
 }
 
 #comments .comment img.avatar {
@@ -129,6 +158,9 @@ input#url {
 	@apply mb-3;
 }
 
+.entry-meta {
+	@apply border-t border-b pt-3 pb-3 mb-2;
+}
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
