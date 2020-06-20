@@ -34,12 +34,6 @@ a:focus {
 	@apply text-teal-400;
 }
 
-.site-footer a {
-	@apply text-teal-200 underline;
-}
-.site-footer a:hover {
-	@apply text-teal-900;
-}
 p {
 	@apply mb-3 text-xl;
 }
@@ -51,7 +45,9 @@ p {
 
 @import "node_modules/tailwindcss/utilities.css";
 
-
+#content {
+	@apply mb-12;
+}
 #header-nav {
 	@apply flex flex-wrap bg-teal-500 p-6;
 }
@@ -63,8 +59,31 @@ p {
 #header-nav-toggle {
 	@apply block;
 }
+
+#nav-toggle {
+	@apply font-semibold px-3 py-2 border rounded text-teal-200 border-teal-400;
+}
+#nav-toggle:hover,
+#nav-toggle:focus {
+	@apply: text-white border-white;
+}
+#nav-toggle svg {
+	@apply fill-current h-3 w-3;
+
+}
 #header-nav-items {
 	@apply w-full hidden flex-grow;
+}
+
+#site-footer{
+	@apply bg-teal-500 text-teal-100 mt-4 pt-6 pb-2;
+}
+
+#site-footer a {
+	@apply text-teal-200 underline;
+}
+#site-footer a:hover {
+	@apply text-teal-900;
 }
 
 @screen lg {

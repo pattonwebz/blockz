@@ -7,7 +7,7 @@
 
 ?>
 		</main>
-		<footer class="site-footer bg-teal-500 text-teal-100 mt-4 pt-6 pb-2">
+		<footer id="site-footer">
 			<?php
 			if ( is_active_sidebar( 'footer' ) ) {
 				?>
