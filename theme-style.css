@@ -191,6 +191,10 @@ input#url {
 	@apply mt-4 mb-4;
 }
 
+#site-title {
+	@apply font-semibold text-xl tracking-tight;
+}
+
 #header-nav-toggle {
 	@apply block;
 }

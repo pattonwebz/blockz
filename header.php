@@ -26,7 +26,7 @@
 				<?php
 				$blockz_header_el = ( is_single() ) ? 'span' : 'h1';
 				printf(
-					'<%1$s0 class="font-semibold text-xl tracking-tight"></%1$s>',
+					'<%1$s0 id="site-title"></%1$s>',
 					esc_attr( $blockz_header_el ),
 					bloginfo( 'name' )
 				)

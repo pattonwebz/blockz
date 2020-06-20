@@ -1158,6 +1158,12 @@ input#url {
   margin-bottom: 1rem;
 }
 
+#site-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
 #header-nav-toggle {
   display: block;
 }
