@@ -190,3 +190,19 @@ input#url {
 .wp-block-separator {
 	@apply mt-4 mb-4;
 }
+
+#header-nav-toggle {
+	@apply block;
+}
+#header-nav-items {
+	@apply w-full hidden flex-grow;
+}
+
+@screen lg {
+	#header-nav-toggle {
+		@apply hidden;
+	}
+	#header-nav-items {
+		@apply flex items-center w-auto
+	}
+}

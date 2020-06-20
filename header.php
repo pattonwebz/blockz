@@ -32,7 +32,7 @@
 				)
 				?>
 			</div>
-		<div class="block md:hidden">
+		<div id="header-nav-toggle">
 			<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
 				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title><?php esc_html__( 'Menu', 'blockz' ); ?></title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
 			</button>
@@ -41,13 +41,12 @@
 		if ( has_nav_menu( 'primary-menu' ) ) {
 			wp_nav_menu(
 				array(
-					'theme_location'  => 'primary-menu',
-					'container'       => 'div',
-					'container_id'    => 'nav-items',
-					'container_class' => 'w-full md:block hidden flex-grow lg:flex lg:items-center lg:w-auto',
-					'items_wrap'      => '%3$s',
-					'depth'           => 1,
-					'walker'          => new \PattonWebz\Blockz\Walker\TailwindNavWalker(),
+					'theme_location' => 'primary-menu',
+					'container'      => 'div',
+					'container_id'   => 'header-nav-items',
+					'items_wrap'     => '%3$s',
+					'depth'          => 1,
+					'walker'         => new \PattonWebz\Blockz\Walker\TailwindNavWalker(),
 				)
 			);
 		}
