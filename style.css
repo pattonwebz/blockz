@@ -1158,6 +1158,15 @@ input#url {
   margin-bottom: 1rem;
 }
 
+#header-nav {
+  display: flex;
+  flex-wrap: wrap;
+  --bg-opacity: 1;
+  background-color: #38b2ac;
+  background-color: rgba(56, 178, 172, var(--bg-opacity));
+  padding: 1.5rem;
+}
+
 #site-title {
   font-weight: 600;
   font-size: 1.25rem;

@@ -191,6 +191,10 @@ input#url {
 	@apply mt-4 mb-4;
 }
 
+#header-nav {
+	@apply flex flex-wrap bg-teal-500 p-6;
+}
+
 #site-title {
 	@apply font-semibold text-xl tracking-tight;
 }

@@ -21,7 +21,7 @@
 			<?php esc_html_e( 'Skip to content', 'blockz' ); ?>
 		</a>
 	<header>
-		<nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+		<nav id="header-nav">
 			<div class="flex items-center flex-shrink-0 text-white mr-6">
 				<?php
 				$blockz_header_el = ( is_single() ) ? 'span' : 'h1';
