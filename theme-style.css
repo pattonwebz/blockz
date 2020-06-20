@@ -1,4 +1,4 @@
-@import "assets/src/css/header.css";
+@import "assets/src/css/header-comment-block.css";
 
 @import "node_modules/tailwindcss/base.css";
 
@@ -50,6 +50,31 @@ p {
 @import "node_modules/tailwindcss/components.css";
 
 @import "node_modules/tailwindcss/utilities.css";
+
+
+#header-nav {
+	@apply flex flex-wrap bg-teal-500 p-6;
+}
+
+#site-title {
+	@apply font-semibold text-xl tracking-tight;
+}
+
+#header-nav-toggle {
+	@apply block;
+}
+#header-nav-items {
+	@apply w-full hidden flex-grow;
+}
+
+@screen lg {
+	#header-nav-toggle {
+		@apply hidden;
+	}
+	#header-nav-items {
+		@apply flex items-center w-auto
+	}
+}
 
 .btn,
 input[type=button],
@@ -189,28 +214,4 @@ input#url {
 
 .wp-block-separator {
 	@apply mt-4 mb-4;
-}
-
-#header-nav {
-	@apply flex flex-wrap bg-teal-500 p-6;
-}
-
-#site-title {
-	@apply font-semibold text-xl tracking-tight;
-}
-
-#header-nav-toggle {
-	@apply block;
-}
-#header-nav-items {
-	@apply w-full hidden flex-grow;
-}
-
-@screen lg {
-	#header-nav-toggle {
-		@apply hidden;
-	}
-	#header-nav-items {
-		@apply flex items-center w-auto
-	}
 }
