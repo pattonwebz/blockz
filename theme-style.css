@@ -36,10 +36,6 @@ p {
 	@apply mb-3 text-xl;
 }
 
-#nav-items.hidden{
-	@apply h-0;
-}
-
 @import "node_modules/tailwindcss/components.css";
 
 @import "node_modules/tailwindcss/utilities.css";
@@ -86,22 +82,26 @@ p {
 }
 #header-nav-items .menu-item a:hover,
 #header-nav-items .menu-item a:focus {
-	@apply text-orange-300 underline;
+	@apply font-semibold underline;
 }
 #header-nav-items .menu-item a:active {
 	@apply text-orange-300;
 }
 #site-footer{
-	@apply bg-orange-600 text-orange-100 mt-4 pt-6 pb-2;
+	@apply bg-gray-900 text-white mt-4 pt-6 pb-2;
+	text-shadow: 1px 1px #00000088;
 }
 
 #site-footer a {
-	@apply text-orange-200 underline;
+	@apply text-white underline;
 }
 #site-footer a:hover {
-	@apply text-orange-900;
+	@apply text-orange-100 no-underline;
 }
 
+#site-footer .copyrights small {
+	@apply text-base;
+}
 @screen lg {
 	#header-nav-toggle {
 		@apply hidden;
@@ -109,17 +109,41 @@ p {
 	#header-nav-items {
 		@apply flex items-center w-auto;
 	}
+	#header-nav-items .menu-item a {
+		@apply mt-0;
+	}
 }
 
 .btn,
 input[type=button],
 input[type=submit] {
-	@apply font-bold py-2 px-4 rounded bg-orange-600 text-white;
+	@apply font-bold py-2 px-4 rounded bg-orange-600 text-white outline-none;
 }
 .btn:hover,
+input[type=button]:focus,
+input[type=submit]:focus  {
+	@apply bg-orange-800 text-white shadow-outline;
+}
+
 input[type=button]:hover,
-input[type=submit]:focus {
+input[type=submit]:hover  {
 	@apply bg-orange-800 text-white;
+}
+
+#site-footer .btn,
+#site-footer input[type=button],
+#site-footer input[type=submit] {
+	@apply font-bold py-2 px-4 rounded bg-orange-800 text-white outline-none;
+}
+#site-footer .btn:hover,
+#site-footer input[type=button]:focus,
+#site-footer input[type=submit]:focus  {
+	@apply bg-orange-200 text-orange-900 shadow-outline;
+}
+
+#site-footer input[type=button]:hover,
+#site-footer input[type=submit]:hover  {
+	@apply bg-orange-200 text-orange-900;
 }
 
 #commentform > p > label {
@@ -129,9 +153,20 @@ input[type=submit]:focus {
 textarea#comment,
 input#author,
 input#email,
-input#url,
-input.search-field {
+input#url {
 	@apply block w-full p-2 px-3 border-2 rounded border-orange-600 outline-none;
+}
+
+p.comment-form-cookies-consent #wp-comment-cookies-consent {
+	width: 1.25rem;
+	height: 1.25rem;
+	vertical-align: text-bottom;
+	margin-bottom: 1px;
+	@apply mr-1;
+}
+p.comment-form-cookies-consent #wp-comment-cookies-consent,
+#commentform p.comment-form-cookies-consent label {
+	@apply inline;
 }
 
 textarea#comment:focus,
@@ -143,11 +178,27 @@ input.search-field:focus {
 }
 
 input.search-field {
-	@apply p-2 py-3 text-black;
+	@apply p-2 px-3 border-2 rounded border-orange-600 outline-none text-black;
+}
+
+#site-footer input.search-field,
+#site-footer input.search-submit {
+	@apply block border-none rounded outline-none w-full;
+}
+
+#site-footer input.search-submit {
+	@apply mt-2;
+}
+
+#comments a {
+	@apply text-orange-900;
+}
+#comments a:hover {
+	@apply no-underline;
 }
 
 #comments .comment {
-	@apply border bg-orange-300 border-orange-600 p-4 mb-2;
+	@apply border bg-orange-200 border-orange-600 p-4 mb-2;
 }
 
 #comments .comment img.avatar {

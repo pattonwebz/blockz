@@ -31,7 +31,7 @@
 			)
 			?>
 			<div id="header-nav-toggle">
-				<button id="nav-toggle" name="open navigation links">
+				<button id="nav-toggle" title="open navigation links">
 					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title><?php esc_html__( 'Menu', 'blockz' ); ?></title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
 				</button>
 			</div>

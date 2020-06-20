@@ -16,7 +16,7 @@
 		)
 	);
 	?>
-	<div class="post_tags">
+	<div class="post_tags clearfix">
 		<?php the_tags( '<span class="meta italic">' . esc_html__( 'Tags: ', 'blockz' ) . '</span> ', ' ' ); ?>
 	</div>
 	<?php
