@@ -42,7 +42,7 @@
 					'container_id'    => 'nav-items',
 					'container_class' => 'w-full md:block hidden flex-grow lg:flex lg:items-center lg:w-auto',
 					'items_wrap'      => '%3$s',
-					// 'depth'           => 1,
+					'depth'           => 1,
 					'walker'          => new \PattonWebz\Blockz\Walker\TailwindNavWalker(),
 				)
 			);
