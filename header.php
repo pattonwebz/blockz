@@ -46,7 +46,7 @@
 					'container_id'   => 'header-nav-items',
 					'items_wrap'     => '%3$s',
 					'depth'          => 1,
-					'walker'         => new \PattonWebz\Blockz\Walker\TailwindNavWalker(),
+					'walker'         => new \PattonWebz\Blockz\Walker\BlockzNavWalker(),
 				)
 			);
 		}
