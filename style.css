@@ -971,6 +971,10 @@ p {
   font-weight: 600;
   font-size: 1.25rem;
   letter-spacing: -0.025em;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  margin-right: 1.5rem;
 }
 
 #header-nav-toggle {

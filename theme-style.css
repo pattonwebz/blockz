@@ -57,7 +57,7 @@ p {
 }
 
 #site-title {
-	@apply font-semibold text-xl tracking-tight;
+	@apply font-semibold text-xl tracking-tight text-white mr-6;
 }
 
 #header-nav-toggle {
