@@ -317,3 +317,33 @@ input.search-field {
 .wp-block-separator {
 	@apply mt-4 mb-4;
 }
+
+.has-orange-color {
+	@apply text-orange-600;
+}
+.has-light-orange-color {
+	@apply text-orange-300;
+}
+.has-dark-orange-color {
+	@apply text-orange-800;
+}
+.has-dark-grey-color {
+	@apply text-gray-900;
+}
+
+.has-orange-background-color {
+	@apply bg-orange-600;
+}
+.has-light-orange-background-color {
+	@apply bg-orange-300;
+}
+.has-dark-orange-background-color {
+	@apply bg-orange-800;
+}
+.has-dark-gray-background-color {
+	@apply bg-gray-900;
+}
+
+.extra-crazy-class-target{
+	color: blue;
+}
