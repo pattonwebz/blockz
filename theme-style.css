@@ -64,7 +64,7 @@ p {
 }
 #nav-toggle:hover,
 #nav-toggle:focus {
-	@apply: text-white border-white;
+	@apply text-white border-white;
 }
 #nav-toggle svg {
 	@apply fill-current h-3 w-3;
@@ -271,7 +271,7 @@ input.search-field {
 	@apply mb-5 pt-2 pb-3 border-t border-b text-gray-600 text-center block;
 }
 .gallery-caption {
-    @extend .wp-caption
+    @apply pb-2 text-sm h-auto;
  }
 .bypostauthor {
     letter-spacing: -0.2px;
