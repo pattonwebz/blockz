@@ -317,3 +317,17 @@ input.search-field {
 .wp-block-separator {
 	@apply mt-4 mb-4;
 }
+
+/* Editor width */
+.wp-block {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	max-width: 1024px;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1280px;
+}

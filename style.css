@@ -1280,3 +1280,18 @@ input.search-field {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+/* Editor width */
+
+.wp-block {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1024px;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: 1280px;
+}
