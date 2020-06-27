@@ -64,7 +64,7 @@ p {
 }
 #nav-toggle:hover,
 #nav-toggle:focus {
-	@apply: text-white border-white;
+	@apply text-white border-white;
 }
 #nav-toggle svg {
 	@apply fill-current h-3 w-3;
@@ -271,7 +271,7 @@ input.search-field {
 	@apply mb-5 pt-2 pb-3 border-t border-b text-gray-600 text-center block;
 }
 .gallery-caption {
-    @extend .wp-caption
+    @apply pb-2 text-sm h-auto;
  }
 .bypostauthor {
     letter-spacing: -0.2px;
@@ -344,6 +344,16 @@ input.search-field {
 	@apply bg-gray-900;
 }
 
-.extra-crazy-class-target{
-	color: blue;
+/* Editor width */
+.wp-block {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	max-width: 1024px;
+}
+
+.wp-block[data-align="wide"] {
+    max-width: 1280px;
 }
