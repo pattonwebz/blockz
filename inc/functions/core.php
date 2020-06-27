@@ -41,10 +41,38 @@ function theme_setup() {
 
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'editor-styles' );
+	add_editor_style( 'style.css' );
 
 	// Adds align-full and align-wide support in the editor.
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'responsive-embeds' );
+
+	// Adds support for editor color palette.
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			[
+				'name'  => __( 'Orange', 'blockz' ),
+				'slug'  => 'orange',
+				'color' => '#dd6b20',
+			],
+			[
+				'name'  => __( 'Light orange', 'blockz' ),
+				'slug'  => 'light-orange',
+				'color' => '#ed8936',
+			],
+			[
+				'name'  => __( 'Dark orange', 'blockz' ),
+				'slug'  => 'dark-orange',
+				'color' => '#c05621',
+			],
+			[
+				'name'  => __( 'Dark gray', 'blockz' ),
+				'slug'  => 'dark-gray',
+				'color' => '#1a202c',
+			],
+		)
+	);
 
 	add_action( 'init', __NAMESPACE__ . '\register_menus' );
 	add_action( 'widgets_init', __NAMESPACE__ . '\register_sidebars' );

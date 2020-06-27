@@ -7,7 +7,7 @@ Tags: blog, one-column, custom-menu, footer-widgets, sticky-post, threaded-comme
 Version: 0.2.1
 Requires at least: 5.0
 Tested up to: 5.4
-Requires PHP: 7.2
+Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: blockz
@@ -865,7 +865,12 @@ p {
 
 #nav-toggle:hover,
 #nav-toggle:focus {
-  @apply: text-white border-white;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  --border-opacity: 1;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, var(--border-opacity));
 }
 
 #nav-toggle svg {
@@ -1217,8 +1222,9 @@ input.search-field {
 }
 
 .gallery-caption {
-  @extend .wp-caption
- 
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  height: auto;
 }
 
 .bypostauthor {
@@ -1273,4 +1279,67 @@ input.search-field {
 .wp-block-separator {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.has-orange-color {
+  --text-opacity: 1;
+  color: #dd6b20;
+  color: rgba(221, 107, 32, var(--text-opacity));
+}
+
+.has-light-orange-color {
+  --text-opacity: 1;
+  color: #fbd38d;
+  color: rgba(251, 211, 141, var(--text-opacity));
+}
+
+.has-dark-orange-color {
+  --text-opacity: 1;
+  color: #9c4221;
+  color: rgba(156, 66, 33, var(--text-opacity));
+}
+
+.has-dark-grey-color {
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.has-orange-background-color {
+  --bg-opacity: 1;
+  background-color: #dd6b20;
+  background-color: rgba(221, 107, 32, var(--bg-opacity));
+}
+
+.has-light-orange-background-color {
+  --bg-opacity: 1;
+  background-color: #fbd38d;
+  background-color: rgba(251, 211, 141, var(--bg-opacity));
+}
+
+.has-dark-orange-background-color {
+  --bg-opacity: 1;
+  background-color: #9c4221;
+  background-color: rgba(156, 66, 33, var(--bg-opacity));
+}
+
+.has-dark-gray-background-color {
+  --bg-opacity: 1;
+  background-color: #1a202c;
+  background-color: rgba(26, 32, 44, var(--bg-opacity));
+}
+
+/* Editor width */
+
+.wp-block {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1024px;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: 1280px;
 }
