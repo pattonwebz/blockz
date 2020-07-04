@@ -8,7 +8,11 @@
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'post-content' ); ?>>
 	<?php
-	the_content();
+	if ( is_archive() ) {
+		the_excerpt();
+	} else {
+		the_content();
+	}
 	wp_link_pages(
 		array(
 			'before' => '<p class="wp-link-pages text-xl">' . esc_html__( 'Continue Reading: ', 'blockz' ),
