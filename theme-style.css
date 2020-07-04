@@ -44,8 +44,10 @@ ul {
 
 .post-content ul,
 .post-content ol,
-#comments ul,
-#comments ol {
+#comments > ul ul,
+#comments > ul ol,
+#comments > ol ul,
+#comments > ol ol {
 	@apply ml-8;
 }
 
