@@ -27,18 +27,56 @@ a {
 	@apply text-orange-700;
 }
 
+pre {
+	@apply whitespace-pre overflow-x-auto;
+}
+
 a:hover,
 a:focus {
 	@apply text-orange-500 underline;
 }
 
-p {
+p,
+ol,
+ul {
 	@apply mb-3 text-xl;
+}
+
+.post-content ul,
+.post-content ol,
+#comments ul,
+#comments ol {
+	@apply ml-8;
+}
+
+#comments ul:first-child,
+#comments ol:first-child {
+	margin-left: 0;
+}
+
+.post-content ul li,
+.post-content ol li,
+#comments ul li,
+#comments ol li {
+	@apply mb-1;
+}
+
+.post-content ul {
+	@apply list-disc;
+}
+
+.post-content ol {
+	@apply list-decimal;
 }
 
 @import "node_modules/tailwindcss/components.css";
 
 @import "node_modules/tailwindcss/utilities.css";
+
+.post-tags {
+	@apply mt-2;
+	clear: both;
+}
 
 #content {
 	@apply mb-12;
@@ -48,15 +86,15 @@ p {
 	@apply underline;
 }
 #header-nav {
-	@apply flex flex-wrap bg-orange-600 p-6;
+	@apply flex-wrap bg-orange-600 p-6;
 }
 
 #site-title {
-	@apply font-semibold text-xl tracking-tight text-white mr-6;
+	@apply inline-flex font-semibold text-xl tracking-tight text-white mr-6;
 }
 
 #header-nav-toggle {
-	@apply block;
+	@apply inline-flex float-right;
 }
 
 #nav-toggle {
@@ -64,7 +102,7 @@ p {
 }
 #nav-toggle:hover,
 #nav-toggle:focus {
-	@apply text-white border-white;
+	@apply border-dashed text-white border-white;
 }
 #nav-toggle svg {
 	@apply fill-current h-3 w-3;
@@ -107,11 +145,25 @@ p {
 		@apply hidden;
 	}
 	#header-nav-items {
-		@apply flex items-center w-auto;
+		@apply inline-flex items-center w-auto;
 	}
 	#header-nav-items .menu-item a {
 		@apply mt-0;
 	}
+}
+
+.post-title-h1 {
+	@apply text-6xl text-center leading-none w-auto;
+	margin: 1.5rem calc(25% - 25vw) 2.5rem;
+}
+
+.post-title-h2 {
+	@apply text-4xl text-center w-auto;
+	margin: 1.5rem calc(25% - 25vw) 2rem;
+}
+
+.editor-post-title__input {
+	@apply font-sans text-6xl text-center mt-3 mb-4;
 }
 
 .btn,
@@ -155,6 +207,10 @@ input#author,
 input#email,
 input#url {
 	@apply block w-full p-2 px-3 border-2 rounded border-orange-600 outline-none;
+}
+
+.comment .reply {
+	@apply mb-2;
 }
 
 p.comment-form-cookies-consent #wp-comment-cookies-consent {

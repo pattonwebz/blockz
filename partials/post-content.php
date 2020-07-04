@@ -20,16 +20,16 @@
 		)
 	);
 	?>
-	<div class="post_tags clearfix">
+	<div class="post-tags">
 		<?php the_tags( '<span class="meta italic">' . esc_html__( 'Tags: ', 'blockz' ) . '</span> ', ' ' ); ?>
 	</div>
-	<?php
-	if ( is_single() ) {
-		?>
-		<div class="comments border-t mt-3 pt-2 pb-2">
-			<?php comments_template(); ?>
-		</div>
-		<?php
-	}
-	?>
 </div>
+<?php
+if ( is_single() ) {
+	?>
+	<div class="comments border-t mt-3 pt-2 pb-2">
+		<?php comments_template(); ?>
+	</div>
+	<?php
+}
+?>
