@@ -11,7 +11,13 @@
 	if ( is_archive() ) {
 		the_excerpt();
 	} else {
-		the_content();
+		the_content(
+			sprintf(
+				/* translators: The post title wrapped for screen readers. */
+				esc_html__( 'Continue reading %s', 'blockz' ),
+				'<span class="screen-reader-text">  ' . get_the_title() . '</span>'
+			)
+		);
 	}
 	wp_link_pages(
 		array(
