@@ -23,11 +23,14 @@
 	<header>
 		<nav id="header-nav">
 			<?php
-			$blockz_header_el = ( is_single() ) ? 'span' : 'h1';
+			$blockz_header_el    = ( is_single() ) ? 'span' : 'h1';
+			$blockz_is_main_page = ( is_home() || is_front_page() );
 			printf(
-				'<%1$s id="site-title">%2$s</%1$s>',
+				'<%1$s id="site-title">%3$s%2$s%4$s</%1$s>',
 				$blockz_header_el, // phpcs:ignore -- this is static text
-				esc_html( get_bloginfo( 'name' ) )
+				esc_html( get_bloginfo( 'name' ) ),
+				( ! $blockz_is_main_page ) ? '<a href="' . esc_url( get_home_url() ) . '">' : '',
+				( ! $blockz_is_main_page ) ? '</a>' : '' // phpcs:ignore -- static string
 			)
 			?>
 			<div id="header-nav-toggle">
