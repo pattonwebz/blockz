@@ -26,13 +26,13 @@
 			$blockz_header_el = ( is_single() ) ? 'span' : 'h1';
 			printf(
 				'<%1$s id="site-title">%2$s</%1$s>',
-				esc_attr( $blockz_header_el ),
+				$blockz_header_el, // phpcs:ignore -- this is static text
 				esc_html( get_bloginfo( 'name' ) )
 			)
 			?>
 			<div id="header-nav-toggle">
-				<button id="nav-toggle" title="open navigation links">
-					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title><?php esc_html__( 'Menu', 'blockz' ); ?></title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+				<button id="nav-toggle" title="<?php esc_attr_e( 'open navigation links', 'blockz' ); ?>">
+					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title><?php esc_html_e( 'Menu', 'blockz' ); ?></title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
 				</button>
 			</div>
 			<?php
