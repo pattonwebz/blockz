@@ -24,7 +24,7 @@
 						sprintf(
 							/* Translators: site name */
 							__( 'Copyright %1$d &copy; %2$s', 'blockz' ),
-							date( 'Y' ),
+							date_i18n( _x( 'Y', 'copyright date format', 'blockz' ) ),
 							get_bloginfo( 'name' )
 						)
 					);
