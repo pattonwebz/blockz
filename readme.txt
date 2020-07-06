@@ -27,4 +27,5 @@ Some blocks are completely unstyled on purpose, I decided to try add the absolut
 * Initial build
 
 == Resources ==
-* tailwindcss - used under MIT licence.
+* tailwindcss         - https://github.com/tailwindcss/tailwindcss/blob/master/LICENSE - Tailwind CSS used under MIT licence.
+* composer autoloader - https://github.com/composer/composer/blob/master/LICENSE       - Composer is used under MIT licence.
