@@ -12,6 +12,9 @@ A basic theme build to test how easy it is to build a Gutenberg ready theme.
 
 Blockz is a theme build to be ready for Gutenberg. Uses TailwindCSS as a componentized style framework. Blockz has full block editor support. It is super lightweight with all styles and scripts weighing less than 30kb before optimizations. Clean and readable text and accessibility ready. Ideal for use as a blogger theme or for a personal website.
 
+== Limitations ==
+
+This theme currently has no support for dropdowns in the main menu.
 
 == Frequently Asked Questions ==
 
@@ -20,6 +23,10 @@ Blockz is a theme build to be ready for Gutenberg. Uses TailwindCSS as a compone
 If a block looks broken or doesn't work correctly please let me know.
 
 Some blocks are completely unstyled on purpose, I decided to try add the absolute minimum about of styles and rely as much as possible on the core provided block styling.
+
+= Why can't I add dropdowns to the menus =
+
+This theme does not have support for dropdowns in menus. Support will be added in future but adding a dropdown to menus that is fully accessible was troublesome. Menu will soon be replaces with a gutenberg-ready styled menu that matches cores new NavBlock.
 
 == Changelog ==
 
