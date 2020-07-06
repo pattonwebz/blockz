@@ -9,7 +9,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 A basic theme build to test how easy it is to build a Gutenberg ready theme.
 
 == Description ==
-Blockz is a theme build to be ready for Gutenberg. Uses TailwindCSS as a componentized style framework.
+
+Blockz is a theme build to be ready for Gutenberg. Uses TailwindCSS as a componentized style framework. Blockz has full block editor support. It is super lightweight with all styles and scripts weighing less than 30kb before optimizations. Clean and readable text and accessibility ready. Ideal for use as a blogger theme or for a personal website.
+
 
 == Frequently Asked Questions ==
 
