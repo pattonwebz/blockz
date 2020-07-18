@@ -20,8 +20,8 @@
 		<a class="skip-link screen-reader-text" href="#content">
 			<?php esc_html_e( 'Skip to content', 'blockz' ); ?>
 		</a>
-	<header>
-		<nav id="header-nav" aria-label="<?php esc_attr_e( 'Primary', 'blockz' ); ?>">
+	<header role="banner">
+		<nav id="header-nav" aria-label="<?php esc_attr_e( 'Primary', 'blockz' ); ?>" role="navigation">
 			<?php
 			$blockz_header_el    = ( is_single() ) ? 'span' : 'h1';
 			$blockz_is_main_page = ( is_home() || is_front_page() );
@@ -54,4 +54,4 @@
 			?>
 		</nav>
 	</header>
-	<main id="content" class="container">
+	<main id="content" class="container" role="main">
