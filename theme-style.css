@@ -94,6 +94,13 @@ ul {
 #site-title {
 	@apply inline-flex font-semibold text-xl tracking-tight text-white mr-6;
 }
+#site-title a {
+	@apply text-white no-underline;
+}
+#site-title a:hover,
+#site-title a:focus {
+	@apply underline;
+}
 
 #header-nav-toggle {
 	@apply inline-flex float-right;

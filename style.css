@@ -4,7 +4,7 @@ Author: williampatton
 Author URI: https://www.pattonwebz.com/
 Description: Blockz is clean and simple gutenberg-ready theme with full block editor support. Super lightweight - under 30kb before optimizations - with a focus on clean and readable text. Meets accessibility ready standards. Ideal for use as a blogger theme or for a personal website.
 Tags: blog, one-column, custom-menu, footer-widgets, sticky-post, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
-Version: 0.2.1
+Version: 0.3.0
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -842,7 +842,8 @@ ul {
 }
 
 #header-nav {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   --bg-opacity: 1;
   background-color: #dd6b20;
   background-color: rgba(221, 107, 32, var(--bg-opacity));
@@ -850,6 +851,8 @@ ul {
 }
 
 #site-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   font-weight: 600;
   font-size: 1.25rem;
@@ -860,7 +863,21 @@ ul {
   margin-right: 1.5rem;
 }
 
+#site-title a {
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  text-decoration: none;
+}
+
+#site-title a:hover,
+#site-title a:focus {
+  text-decoration: underline;
+}
+
 #header-nav-toggle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   float: right;
 }
@@ -901,7 +918,9 @@ ul {
 #header-nav-items {
   width: 100%;
   display: none;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #header-nav-items.block{
@@ -966,8 +985,12 @@ ul {
   }
 
   #header-nav-items {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: auto;
   }
 
@@ -1026,7 +1049,8 @@ input[type=submit]:focus  {
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+          box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 input[type=button]:hover,
@@ -1066,7 +1090,8 @@ input[type=submit]:hover  {
   --text-opacity: 1;
   color: #7b341e;
   color: rgba(123, 52, 30, var(--text-opacity));
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+          box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 #site-footer input[type=button]:hover,
@@ -1123,7 +1148,8 @@ input#author:focus,
 input#email:focus,
 input#url:focus,
 input.search-field:focus {
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+          box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 input.search-field {
@@ -1214,7 +1240,8 @@ input.search-field {
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   -webkit-clip-path: none;
           clip-path: none;

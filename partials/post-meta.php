@@ -10,8 +10,8 @@
 	<?php
 	$blockz_comments_markup = sprintf(
 		'<a href="%1$s" title="%2$s">%2$s</a>',
-		get_comments_link(),
-		get_comments_number_text( __( 'no comments', 'blockz' ), __( 'one comment', 'blockz' ), __( '% comments', 'blockz' ) )
+		esc_url( get_comments_link() ),
+		esc_attr( get_comments_number_text( __( 'no comments', 'blockz' ), __( 'one comment', 'blockz' ), __( '% comments', 'blockz' ) ) )
 	);
 	echo wp_kses_post(
 		sprintf(
