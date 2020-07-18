@@ -37,7 +37,6 @@ if ( post_password_required() ) {
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			?>
-		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" aria-label="<?php esc_attr_e( 'Comments Top', 'blockz' ); ?>" class="clearfix">
@@ -46,6 +45,7 @@ if ( post_password_required() ) {
 			<div class="nav-next float-right"><?php next_comments_link( esc_html__( 'newer comments', 'blockz' ) . ' <i class="fa fa-arrow-right"></i>' ); ?></div>
 		</nav>
 		<?php } // Check for comment navigation. ?>
+		</h2>
 
 		<ol class="commentlist">
 			<?php
