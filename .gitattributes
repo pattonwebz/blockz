@@ -1,0 +1,16 @@
+# Ignore all test and documentation with “export-ignore”.
+.gitattributes export-ignore
+.gitignore export-ignore
+webpack.mix.js export-ignore
+theme-style.css export-ignore
+tailwind.config.js export-ignore
+phpcs.xml.dist export-ignore
+package.json export-ignore
+package-lock.json export-ignore
+mix-manifest.json export-ignore
+composer.json export-ignore
+composer.lock export-ignore
+/vendor export-ignore
+/node_modules export-ignore
+/.git export-ignore
+/assets/src/css export-ignore
