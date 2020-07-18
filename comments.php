@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 		</h3>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="clearfix">
+		<nav id="comment-nav-above" aria-label="<?php esc_attr_e( 'Comments Top', 'blockz' ); ?>" class="clearfix">
 			<h3 class="sr-only"><?php esc_html_e( 'comments', 'blockz' ); ?></h3>
 			<div class="nav-previous float-left"><?php previous_comments_link( '<i class="fa fa-arrow-left"></i> ' . esc_html__( 'older comments', 'blockz' ) ); ?></div>
 			<div class="nav-next float-right"><?php next_comments_link( esc_html__( 'newer comments', 'blockz' ) . ' <i class="fa fa-arrow-right"></i>' ); ?></div>
@@ -60,7 +60,7 @@ if ( post_password_required() ) {
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through?
 			?>
-			<nav id="comment-nav-below" class="clearfix">
+			<nav id="comment-nav-below" aria-label="<?php esc_attr_e( 'Comments Bottom', 'blockz' ); ?>" class="clearfix">
 				<h3 class="sr-only"><?php esc_html_e( 'comment navigation', 'blockz' ); ?></h3>
 				<div class="nav-previous pull-left"><?php previous_comments_link( '<i class="fa fa-arrow-left" aria-hidden="true"></i> ' . esc_html__( 'older comments', 'blockz' ) ); ?></div>
 				<div class="nav-next pull-right"><?php next_comments_link( esc_html__( 'newer comments', 'blockz' ) . ' <i class="fa fa-arrow-right" aria-hidden="true"></i>' ); ?></div>
