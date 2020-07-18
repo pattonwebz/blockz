@@ -129,11 +129,11 @@ ul {
 }
 
 #header-nav-items .menu-item a {
-	@apply text-orange-100 block mt-4 mr-4;
+	@apply text-orange-100 font-semibold block mt-4 mr-4;
 }
 #header-nav-items .menu-item a:hover,
 #header-nav-items .menu-item a:focus {
-	@apply font-semibold underline;
+	@apply underline;
 }
 #header-nav-items .menu-item a:active {
 	@apply text-orange-300;

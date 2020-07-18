@@ -713,6 +713,11 @@ video {
   position: static
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky
+}
+
 .fill-current {
   fill: currentColor
 }
@@ -929,6 +934,7 @@ ul {
   --text-opacity: 1;
   color: #fffaf0;
   color: rgba(255, 250, 240, var(--text-opacity));
+  font-weight: 600;
   display: block;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -936,7 +942,6 @@ ul {
 
 #header-nav-items .menu-item a:hover,
 #header-nav-items .menu-item a:focus {
-  font-weight: 600;
   text-decoration: underline;
 }
 
