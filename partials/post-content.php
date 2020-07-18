@@ -31,7 +31,7 @@
 	</div>
 </div>
 <?php
-if ( is_single() ) {
+if ( is_single() || is_page() ) {
 	?>
 	<div class="comments border-t mt-3 pt-2 pb-2">
 		<?php comments_template(); ?>
