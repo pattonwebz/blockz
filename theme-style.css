@@ -87,6 +87,10 @@ ul {
 #content a {
 	@apply underline;
 }
+#content a:hover,
+#content a:focus {
+	@apply no-underline;
+}
 #header-nav {
 	@apply flex-wrap bg-orange-600 p-6;
 }
@@ -331,8 +335,7 @@ input.search-field {
     @apply m-3;
 }
 
-.sticky:before {
-	content: 'sticky post';
+.sticky-indicator {
 	@apply mb-5 pt-2 pb-3 border-t border-b text-gray-600 text-center block;
 }
 .gallery-caption {

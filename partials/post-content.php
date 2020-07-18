@@ -8,6 +8,11 @@
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'post-content' ); ?>>
 	<?php
+	if ( is_sticky() && ! is_single() ) {
+		?>
+		<span class="sticky-indicator"><?php esc_html_e( 'sticky post', 'blockz' ); ?></span>
+		<?php
+	}
 	if ( is_archive() ) {
 		the_excerpt();
 	} else {
