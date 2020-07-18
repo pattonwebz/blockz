@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 	<?php
 	if ( have_comments() ) {
 		?>
-		<h3 id="comments-title">
+		<h2 id="comments-title">
 			<?php
 				printf(
 					esc_html(
