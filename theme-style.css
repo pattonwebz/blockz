@@ -336,7 +336,7 @@ input.search-field {
 }
 
 .sticky-indicator {
-	@apply mb-5 pt-2 pb-3 border-t border-b text-gray-600 text-center block;
+	@apply mb-5 pt-2 pb-3 border-t border-b text-gray-700 text-center block;
 }
 .gallery-caption {
     @apply pb-2 text-sm h-auto;
