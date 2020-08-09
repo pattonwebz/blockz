@@ -11,8 +11,10 @@
 			<?php
 			if ( is_active_sidebar( 'footer' ) ) {
 				?>
-				<div class="container grid grid-cols-1 md:grid-cols-3 mb-5">
-					<?php dynamic_sidebar( 'footer' ); ?>
+				<div class="container mb-5">
+					<div id="footer-sidebar">
+						<?php dynamic_sidebar( 'footer' ); ?>
+					</div>
 				</div>
 				<?php
 			}
