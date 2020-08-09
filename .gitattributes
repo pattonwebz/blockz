@@ -10,7 +10,6 @@ package-lock.json export-ignore
 mix-manifest.json export-ignore
 composer.json export-ignore
 composer.lock export-ignore
-/vendor export-ignore
 /node_modules export-ignore
 /.git export-ignore
 /assets/src/css export-ignore
