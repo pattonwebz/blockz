@@ -181,6 +181,22 @@ ul {
 	}
 }
 
+.post-image {
+	max-height: 50vh;
+	overflow: hidden;
+}
+
+.post-image img,
+.post-image picture {
+	margin: 0 auto;
+}
+.post-image.alignwide img,
+.post-image.alignwide picture,
+.post-image.alignfull img,
+.post-image.alignfull picture {
+	width: 100%;
+}
+
 .post-title-h1 {
 	@apply text-6xl text-center leading-none w-auto;
 	margin: 1.5rem calc(25% - 25vw) 2.5rem;

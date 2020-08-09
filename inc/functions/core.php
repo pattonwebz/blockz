@@ -74,6 +74,8 @@ function theme_setup() {
 		)
 	);
 
+	add_image_size( 'blockz_featured_image', 1440, 475, true );
+
 	add_action( 'init', __NAMESPACE__ . '\register_menus' );
 	add_action( 'widgets_init', __NAMESPACE__ . '\register_sidebars' );
 }
