@@ -16,6 +16,9 @@ Blockz is a theme build to be ready for Gutenberg. Uses TailwindCSS as a compone
 
 This theme currently has no support for dropdowns in the main menu.
 
+If featured images are less than 1200px wide (or less than 800px on non-single pages) then they will not output. Featured images are made to be wide or full width so large images are required for display.
+
+
 == Frequently Asked Questions ==
 
 = Why doesn't a certain block look right or why isn't it styled =
