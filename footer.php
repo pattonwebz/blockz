@@ -7,7 +7,7 @@
 
 ?>
 		</main>
-		<footer id="site-footer">
+		<footer id="site-footer" role="contentinfo">
 			<?php
 			if ( is_active_sidebar( 'footer' ) ) {
 				?>
